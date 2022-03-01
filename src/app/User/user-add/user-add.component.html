@@ -1,0 +1,22 @@
+<p>user-add works!</p>
+<div class="form-group">
+    <label for="name">User Name</label>
+    <input
+      type="text"
+      id="name"
+      class="form-control"
+      [(ngModel)] = "name">
+      <div class="form-group">
+          <label for="password">User password</label>
+          <input
+          type="text"
+          id="password"
+          class="form-control"
+          [(ngModel)] = "pass">
+          <div>
+            <button class="btn btn-primary" (click)="OnsubmitData()">{{btnName}}</button>
+          </div>
+          
+
+      </div>
+  </div>

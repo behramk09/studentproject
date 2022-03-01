@@ -1,0 +1,31 @@
+
+<p>user-view works!</p>
+<div class="row">
+    <div class="col-xs-12 col-sm-4">
+        <div class="list-group">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr *ngFor="let user of $stateUser | async">
+                                <th scope="row">{{user.id}}</th>
+                                <td>{{ user.name }}</td>
+                                <td>{{ user.password }}</td>
+                            <td>
+                                <button class="btn btn-primary" (click)="ondelete(user.id)">DELETE</button>
+                                <button class="btn btn-primary" (click)="onUpdate(user.id,user.name,user.password)">Update</button>
+                                <button class="btn btn-primary" 
+                                (click)="onSingleUser(user.id)">Single User Show</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-primary"(click)="onAddUser()">AddUser</button>
+        </div>
+    </div>
